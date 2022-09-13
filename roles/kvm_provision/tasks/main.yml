@@ -27,7 +27,7 @@
     - name: Configure the image
       command: |
         virt-customize -a {{ libvirt_pool_dir }}/{{ vm_name }}.qcow2 \
-        --hostname {{ vm_name }}.pabramov \
+        --hostname {{ vm_name }}.lab.pabramov \
         --root-password password:{{ vm_root_pass }} \
         --ssh-inject 'root:file:{{ ssh_key }}' \
         --uninstall cloud-init --selinux-relabel
